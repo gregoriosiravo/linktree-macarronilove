@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,58 +12,14 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="app.js" defer></script>
   </head>
   <body>
     <div class="container">
       <div class="profile-picture"></div>
-      <h2 class="text-center pb-3">Macarroni Love</h2>
-      <ul class="links mx-4">
-        <li>
-          <a target="_blank" href="https://www.instagram.com/macarroni_love"
-            ><img
-              class="max-width"
-              src="assets/instagram.png"
-              alt="instagram"
-            />
-            Instagram</a
-          >
-        </li>
-        <li>
-          <a target="_blank" href="https://www.tiktok.com/@macarronilove"
-            ><img class="max-width" src="assets/tiktok.png" alt="tiktok" />
-            TikTok</a
-          >
-        </li>
-        <li>
-          <a target="_blank" href="https://youtube.com/@MacarroniLove"
-            ><img class="max-width" src="assets/youtube.png" alt="youtube" />
-            Youtube</a
-          >
-        </li>
-        <li>
-          <a href="cardlist.html"
-            ><img class="max-width" src="assets/shopping.png" alt="shopping" />
-            Compras do Gringo</a
-          >
-        </li>
-        <li>
-          <a href="coupons.html"
-            ><img class="max-width" src="assets/coupons.png" alt="coupons" />
-            Descontos</a
-          >
-        </li>
-        <li>
-          <a href="mailto:canasiravos@gmail.com"
-            ><img class="max-width" src="assets/mail.png" alt="shopping" />
-            Contact Us!</a
-          >
-        </li>
-      </ul>
+      <h2 class="text-center pb-3" data-title>Macarroni Love</h2>
+      <main data-content></main>
     </div>
     <footer class="text-center font-size">
       &copy; 2024

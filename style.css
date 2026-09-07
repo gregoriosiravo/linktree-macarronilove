@@ -94,3 +94,41 @@ h1 {
   background-color: #fff;
   padding: 3px;
 }
+
+main ul {
+  margin: 0 1.5rem;
+}
+
+main li a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+main li img {
+  width: 80px;
+  max-height: 80px;
+  object-fit: contain;
+  margin-right: 0;
+  border-radius: 5px;
+}
+
+.page-home main li img {
+  width: 30px;
+  height: 30px;
+}
+
+main h3 {
+  text-align: center;
+}
+
+.page-primeday main > p a {
+  display: block;
+  width: fit-content;
+  margin: 0 auto 10px;
+  padding: 3px 5px;
+  border-radius: 5px;
+  background-color: grey;
+  color: white;
+  text-decoration: none;
+}

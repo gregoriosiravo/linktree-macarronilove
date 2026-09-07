@@ -12,87 +12,19 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="app.js" defer></script>
   </head>
   <body>
     <div class="container">
       <div>
-        <a href="index.html"
+        <a data-back href="index.html"
           ><img class="item-width" src="assets/left-arrow.png" alt="arrow left"
         /></a>
       </div>
       <div class="profile-picture"></div>
-      <h2 class="text-center pb-3">O Gringo Recomenda</h2>
-      <ul class="links mx-4">
-        <li>
-          <a
-            href="https://www.mercadolivre.com.br/social/macarronilove?matt_tool=79247019&forceInApp=true&ref=BENQzFEAprqUVHehpTOZpybBav3ddMgQXu7PPAfiXrw%2FKYJlc%2BODe4a%2FyqOPl3sqt4dYmnxhOnOncKJs5c2E0WvogC5D2Eg3iZ970qXh8OYt1S5XgB6NPjDd7NTWZ5DeBlU2%2BemJkRldsUuCvlIwuEkaG1WlR2JWuW%2Ff1nZwxK8QGMQabjjflwLL6a6W3v14siVdfA%3D%3D"
-            ><img
-              class="item-width"
-              src="assets/items/forbici.webp"
-              alt="tesoura para cortar pizza"
-            />
-            Tesoura para cortar a pizza</a
-          >
-        </li>
-        <li>
-          <a
-            target="_blank"
-            href="https://www.mercadolivre.com.br/social/macarronilove?matt_tool=79247019&forceInApp=true&ref=BPNr32hBCxgGmGnIhL4SV2P36wl5fRh%2FLMxosfDzWQslnmGd4LckS2oSqeo8K6T0ZQXrTI8tjzu6cx0I318WxN2zqizvfJfQ0GdYFJFqLWgcD9x3b8tHXRNxACl3U4xAjewb7%2Fnb4bllx5q3LLTUIzDZ3Lv0ceY%2BdL8tK4A1QlMQtNJXrKKOxz9USToER7laBCz6tg%3D%3D&skipInApp=true"
-            ><img
-              class="item-width"
-              src="assets/items/scolapasta.jpeg"
-              alt="Escorredor de Macarrão"
-            />
-            Escorredor de Macarrão</a
-          >
-        </li>
-        <li>
-          <a target="_blank" href="https://amzn.to/3PLbvLy"
-            ><img
-              class="item-width"
-              src="assets/items/pote-de-vidro.jpg"
-              alt="pote de vidro"
-            />
-            Pote de Vidro</a
-          >
-        </li>
-        <li>
-          <a target="_blank" href="https://amzn.to/3TWWwR3"
-            ><img
-              class="item-width"
-              src="assets/items/firestick.jpg"
-              alt="amazon fire stick"
-            />
-            Fire Stick Lite</a
-          >
-        </li>
-
-        <li>
-          <a target="_blank" href="https://mercadolivre.com/sec/1kyKMFE"
-            ><img
-              class="item-width"
-              src="assets/items/tripod-professional.jpeg"
-              alt="tripod professional"
-            />
-            Tripé octopus profissional</a
-          >
-        </li>
-        <li>
-          <a href="https://mercadolivre.com/sec/2w4sWSV"
-            ><img
-              class="item-width"
-              src="assets/items/pegboard-panel.webp"
-              alt="Painel PegBoard"
-            />
-            Painel Peg Board com 48 ganchos</a
-          >
-        </li>
-      </ul>
+      <h2 class="text-center pb-3" data-title>O Gringo Recomenda</h2>
+      <main data-content></main>
     </div>
     <footer class="text-center font-size">
       &copy; 2024
