@@ -1,31 +1,41 @@
 
 # Linktree MacarroniLove
 
-This is a static CMS application. The public pages are HTML shells, the page content lives in `content/*.md`, and Git is the database: each CMS save creates a commit in the configured repository.
+This is a Nuxt application with TinaCMS. The page content lives in `content/pages/*.md`, and Git is the database: each Tina save creates a commit in the configured repository.
+
+## Run in 10 minutes
+
+Requirements: Docker Desktop on development machines, or Docker Engine plus Compose on the Raspberry Pi.
+
+For a live-preview development environment:
+
+```text
+docker compose -f docker-compose.dev.yml up
+```
+
+Open `http://localhost:3000/` for Nuxt and `http://localhost:3000/admin/` for TinaCMS. Markdown changes are watched by Nuxt Content and reflected in the preview.
+
+For the production container:
+
+```text
+docker compose up -d --build
+```
+
+The app is available on port `3000`. The same image works on Raspberry Pi ARM64 because it uses the official multi-architecture Node Alpine image.
 
 ## Content workflow
 
-1. Deploy the repository to GitHub Pages.
-2. Create a GitHub OAuth App with the callback URL supplied by your OAuth proxy.
-3. Deploy a small OAuth proxy outside GitHub Pages, then set `backend.base_url` and `backend.auth_endpoint` in `admin/config.yml`. Never put the OAuth client secret in this repository.
-4. Open the GitHub Pages `/admin/` URL, sign in with GitHub, edit a page, and publish. The CMS commits the Markdown change to Git.
+1. Set `TINA_CLIENT_ID`, `TINA_TOKEN`, and `GITHUB_BRANCH` in the environment used for production Tina builds.
+2. Run the production Compose command above.
+3. Protect `/admin/` with your private network, reverse proxy authentication, or VPN before exposing it publicly.
 
-GitHub Pages is static hosting, so it cannot run Netlify Identity or Git Gateway itself. The public site and CMS UI can stay on GitHub Pages, but the OAuth proxy must run on a service that supports server-side code.
+Tina Cloud is not required for local editing. For remote GitHub-backed editing, Tina needs a free Tina client/token setup or another server-side Git authentication layer. Do not commit credentials.
 
 The four existing pages are now editable here:
 
-- `content/home.md`
-- `content/cardlist.md`
-- `content/coupons.md`
-- `content/primeday.md`
+- `content/pages/home.md`
+- `content/pages/cardlist.md`
+- `content/pages/coupons.md`
+- `content/pages/primeday.md`
 
-## Local preview
-
-Because browsers block `fetch()` from local `file://` pages, serve the folder with any static web server before testing. For example, with Python installed:
-
-```text
-python -m http.server 8080
-```
-
-Then open `http://localhost:8080/`. The CMS itself is available at `http://localhost:8080/admin/` once its Git provider is configured.
 

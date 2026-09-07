@@ -1,0 +1,8 @@
+node_modules
+.nuxt
+.output
+.tina
+.env
+.env.*
+!.env.example
+.DS_Store

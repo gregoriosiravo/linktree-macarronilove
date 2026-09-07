@@ -1,0 +1,20 @@
+{
+  "name": "macarroni-love",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tina dev -c \"nuxt dev --host 0.0.0.0\"",
+    "dev:nuxt": "nuxt dev --host 0.0.0.0",
+    "build": "tina build && nuxt build && node scripts/copy-admin.mjs",
+    "preview": "nuxt preview --host 0.0.0.0",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxt/content": "^3.6.0",
+    "nuxt": "^3.17.5",
+    "tinacms": "^2.9.0"
+  },
+  "devDependencies": {
+    "@tinacms/cli": "^1.9.0"
+  }
+}
