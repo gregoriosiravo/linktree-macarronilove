@@ -1,6 +1,10 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: sirap95/linktree-macarronilove
   branch: main
+  # Set these to the public URL of your OAuth proxy before using /admin/.
+  # base_url: https://your-oauth-proxy.example.com
+  # auth_endpoint: auth
 
 media_folder: "assets/uploads"
 public_folder: "/assets/uploads"

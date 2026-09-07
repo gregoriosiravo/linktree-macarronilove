@@ -5,10 +5,12 @@ This is a static CMS application. The public pages are HTML shells, the page con
 
 ## Content workflow
 
-1. Deploy the repository to Netlify. The Git Gateway backend requires the CMS to run from the Netlify site, not GitHub Pages.
-2. In Netlify, enable **Identity** and then enable **Git Gateway** under Identity settings.
-3. Under Identity registration, choose **Invite only** and invite the GitHub email address that should edit the site.
-4. Open the Netlify site's `/admin/` URL, complete the invitation, sign in, edit a page, and publish. The CMS commits the Markdown change to Git.
+1. Deploy the repository to GitHub Pages.
+2. Create a GitHub OAuth App with the callback URL supplied by your OAuth proxy.
+3. Deploy a small OAuth proxy outside GitHub Pages, then set `backend.base_url` and `backend.auth_endpoint` in `admin/config.yml`. Never put the OAuth client secret in this repository.
+4. Open the GitHub Pages `/admin/` URL, sign in with GitHub, edit a page, and publish. The CMS commits the Markdown change to Git.
+
+GitHub Pages is static hosting, so it cannot run Netlify Identity or Git Gateway itself. The public site and CMS UI can stay on GitHub Pages, but the OAuth proxy must run on a service that supports server-side code.
 
 The four existing pages are now editable here:
 
