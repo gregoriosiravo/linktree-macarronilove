@@ -1,6 +1,5 @@
 backend:
-  name: github
-  repo: sirap95/linktree-macarronilove
+  name: git-gateway
   branch: main
 
 media_folder: "assets/uploads"

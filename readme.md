@@ -5,10 +5,10 @@ This is a static CMS application. The public pages are HTML shells, the page con
 
 ## Content workflow
 
-1. Deploy the repository to Netlify (or another host that supports Decap CMS authentication).
-2. In `admin/config.yml`, change `backend.repo` if the repository is not `sirap95/linktree-macarronilove`.
-3. Enable Netlify Identity and Git Gateway, or configure a GitHub OAuth provider for Decap CMS.
-4. Open `/admin/`, sign in, edit a page, and publish. The CMS commits the Markdown change to Git.
+1. Deploy the repository to Netlify. The Git Gateway backend requires the CMS to run from the Netlify site, not GitHub Pages.
+2. In Netlify, enable **Identity** and then enable **Git Gateway** under Identity settings.
+3. Under Identity registration, choose **Invite only** and invite the GitHub email address that should edit the site.
+4. Open the Netlify site's `/admin/` URL, complete the invitation, sign in, edit a page, and publish. The CMS commits the Markdown change to Git.
 
 The four existing pages are now editable here:
 
