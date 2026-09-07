@@ -1,0 +1,20 @@
+backend:
+  name: github
+  repo: sirap95/linktree-macarronilove
+  branch: main
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    folder: "content"
+    create: false
+    format: "frontmatter"
+    identifier_field: "slug"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string", required: false }
+      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Content", name: "body", widget: "markdown" }
